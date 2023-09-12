@@ -4,7 +4,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Detail from './pages/Detail';
 import Nav from './components/Nav';
-// import Match from './pages/MatchAllRoute';
+import Match from './pages/MatchAllRoute';
 
 function App() {
   const API_KEY = import.meta.env.VITE_API_KEY;
@@ -32,7 +32,7 @@ function App() {
         { Object.keys(data).length > 0 &&
           <Route path='/detail/:id' element={<Detail data={data} />} />
         }
-        {/* <Route path="*" element={<MatchAllRoute />} /> */}
+        <Route path="*" element={<MatchAllRoute />} />
       </Routes>
     </BrowserRouter>
   )

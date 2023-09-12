@@ -15,11 +15,12 @@ export default function Home(props) {
           _data.map((item, key) => {
             return (
               <li key={key}>
-                <a href={`detail/${key}`}></a>
-                <img loding="lazy" src={item.ty3Picture} alt={item.ty3Kind} />
-                <h3>{item.sj}</h3>
-                <p>상태: {item.ty3Process}</p>
-                <p>견종: {item.ty3Kind}</p>
+                <Link to={`detail/${key}`}>
+                  <img loding="lazy" src={item.ty3Picture} alt={item.ty3Kind} />
+                  <h3>{item.sj}</h3>
+                  <p>상태: {item.ty3Process}</p>
+                  <p>견종: {item.ty3Kind}</p>
+                </Link>
               </li>
             )
           })
